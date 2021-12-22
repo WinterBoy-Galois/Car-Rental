@@ -1,0 +1,148 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="CarRental2.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 83px;
+            width: 239px;
+            margin-left: 3px;
+            margin-top: 0px;
+        }
+        .auto-style3 {
+            width: 70px;
+            height: 6px;
+        }
+        .auto-style4 {
+            margin-left: 0px;
+        }
+        .auto-style5 {
+            width: 100%;
+            position: inherit;
+            height: 449px;
+        }
+        .auto-style6 {
+            width: 202px;
+            height: 6px;
+        }
+        .auto-style7 {
+            width: 444px;
+            height: 6px;
+        }
+        .auto-style8 {
+            margin-left: 4px;
+        }
+        .auto-style9 {
+            height: 23px;
+        }
+        .auto-style10 {
+            height: 40px;
+        }
+        .auto-style11 {
+            height: 4px;
+            width: 239px;
+            margin-left: 3px;
+            margin-top: 0px;
+        }
+        .auto-style13 {
+            height: 20px;
+        }
+        .auto-style14 {
+            height: 72px;
+            width: 233px;
+            margin-left: 3px;
+            margin-top: 0px;
+        }
+        </style>
+</head>
+<body background="images/carback.jpg" style ="height:100%; margin:0; padding:0;">
+    <form id="form1" runat="server">
+    <table style="margin: 0;" class="auto-style5">
+      <tr style ="width:1100px;"> 
+          <td class="auto-style3" style="background-color: #000000">
+              <img src ="images/rent a car logo.jpg" class="auto-style1" /></td>
+          <td class="auto-style7" style="background-position: inherit; background-color: #000000; font-family: Arial; font-size: x-large; font-weight: normal; font-style: oblique; font-variant: normal; text-transform: uppercase; color: #808000; background-image: none; text-align: center; text-decoration: blink;">
+              CAR RENTAL COMPANY</td>
+          <td style="background-color: #000000; text-align:right" class="auto-style6">
+              <asp:ImageButton ID="ImageButton1" runat="server" CssClass="auto-style4" Height="51px" ImageUrl="~/images/if_facebook_circle_color_107175.png" Width="56px" />&nbsp;&nbsp;<asp:ImageButton ID="ImageButton2" runat="server" Height="45px" ImageUrl="~/images/if_social_style_1_googleplus_393279.png" Width="50px" />&nbsp;&nbsp;<asp:ImageButton ID="ImageButton3" runat="server" Height="51px" ImageUrl="~/images/if_youtube_circle_color_107167.png" CssClass="auto-style8" Width="54px" /></td>
+      </tr>
+        <tr style ="width:1100px;">
+            <td colspan="3" class="auto-style10">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Font-Size="Medium">
+                    <Items>
+                        <asp:MenuItem Text="HOME" Value="HOME" NavigateUrl="~/index.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="CARS TO RENT" Value="SERVICES" NavigateUrl="~/CarsToRent.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="ABOUT US" Value="ABOUS US" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="LOGIN" Value="LOGIN" NavigateUrl="~/Customers.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="SIGN UP" Value="SIGN UP" NavigateUrl="~/Signup.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="CONTACT US" Value="CONTACT US"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#999966" />
+                    <StaticMenuItemStyle CssClass="  " Font-Bold="True" Font-Size="Large" ForeColor="Olive" HorizontalPadding="30px" />
+                    <StaticSelectedStyle ItemSpacing="15px" />
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr style ="width:1100px;">
+            <td colspan ="3" class="auto-style11">
+
+                
+                <br />
+                <asp:Timer ID="Timer1" runat="server">
+                </asp:Timer>
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <asp:UpdatePanel ID="up1" runat="server">
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                    </Triggers>
+                     <ContentTemplate>
+                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSource1" />
+                <br />
+                <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/XMLFile1.xml"></asp:XmlDataSource>
+               </ContentTemplate>
+                </asp:UpdatePanel> 
+                
+
+
+                
+
+
+            </td>
+        </tr>
+        <tr style ="width:1100px">
+            <td colspan ="3" class="auto-style9">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                   </asp:ContentPlaceHolder>
+
+            </td>
+        </tr>
+        <tr style ="width:1100px;">
+            <td colspan="3" style="color: #808000; background-color: #000000;" class="auto-style13">
+                            <asp:Label ID="Label1" runat="server" Text="&copy 2017 CAR RENTAL COMPANY"></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ISTANBUL OFFICE +902685486216&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DENIZLI OFFICE&nbsp; +90507636223&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/index.aspx">HOME</asp:HyperLink>
+&nbsp;
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Contact.aspx">Contact us</asp:HyperLink>
+                            <br />
+              <img src ="images/rent a car logo.jpg" class="auto-style14" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <asp:ImageButton ID="ImageButton4" runat="server" CssClass="auto-style4" Height="51px" ImageUrl="~/images/if_facebook_circle_color_107175.png" Width="56px" />&nbsp;<asp:ImageButton ID="ImageButton5" runat="server" Height="45px" ImageUrl="~/images/if_social_style_1_googleplus_393279.png" Width="50px" />&nbsp;<asp:ImageButton ID="ImageButton6" runat="server" Height="51px" ImageUrl="~/images/if_youtube_circle_color_107167.png" CssClass="auto-style8" Width="54px" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+            
+    </table>
+        
+    
+    </form>
+</body>
+</html>

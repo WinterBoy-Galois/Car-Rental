@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>/adverts\1.jpg</ImageUrl>
+    <NavigateUrl>http://www.acura.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  
+  <Ad>
+  <ImageUrl>/adverts\2.png</ImageUrl>
+  <NavigateUrl>http://www.musicstore.de</NavigateUrl>
+  <Impressions>100</Impressions>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>/adverts\3.jpg</ImageUrl>
+    <NavigateUrl>http://www.steelerubber.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>/adverts\4.jpg</ImageUrl>
+    <NavigateUrl>http://www.audi.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>/adverts\5.jpg</ImageUrl>
+    <NavigateUrl>http://www.ldnchauffeur.co.uk</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>/adverts\6.png</ImageUrl>
+    <NavigateUrl>http://www.tesco.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>/adverts\7.jpg</ImageUrl>
+    <NavigateUrl>http://www.cinemark.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  
+  <Ad>
+    <ImageUrl>/adverts\8.jpg</ImageUrl>
+    <NavigateUrl>http://www.paytmmall.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>/adverts\9.png</ImageUrl>
+    <NavigateUrl>http://www.carrentals.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+  
+  <Ad>
+    <ImageUrl>/adverts\10.png</ImageUrl>
+    <NavigateUrl>http://www.geico.com</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+
+  <Ad>
+    <ImageUrl>/adverts\11.jpg</ImageUrl>
+    <NavigateUrl>http://www.carhouse.cl</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+
+  
+  
+
+
+</Advertisements>

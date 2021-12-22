@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6C831CB3-43A0-484C-A53E-B03D064BCE5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myCarRental</RootNamespace>
+    <AssemblyName>myCarRental</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBrand.Designer.cs">
+      <DependentUpon>AddBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCategory.Designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changePassword.Designer.cs">
+      <DependentUpon>changePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerIndate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerIndate.Designer.cs">
+      <DependentUpon>CustomerIndate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerReport.Designer.cs">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportcrystalrent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportcrystalrent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportrent.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reportrent.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rentalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rentalReport.Designer.cs">
+      <DependentUpon>rentalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modelmanagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modelmanagement.Designer.cs">
+      <DependentUpon>modelmanagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CARRENTALDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CARRENTALDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Category_Management_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category_Management_Dashboard.Designer.cs">
+      <DependentUpon>Category_Management_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerManagement.Designer.cs">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteBrand.Designer.cs">
+      <DependentUpon>DeleteBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCAtegory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCAtegory.Designer.cs">
+      <DependentUpon>DeleteCAtegory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteRental.Designer.cs">
+      <DependentUpon>DeleteRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteReservation.Designer.cs">
+      <DependentUpon>DeleteReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteVehicleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteVehicleDetails.Designer.cs">
+      <DependentUpon>DeleteVehicleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MakeReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MakeReservation.Designer.cs">
+      <DependentUpon>MakeReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewVehicle.Designer.cs">
+      <DependentUpon>NewVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rental Management DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rental Management DashBoard.Designer.cs">
+      <DependentUpon>Rental Management DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rental.Designer.cs">
+      <DependentUpon>Rental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reservationreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservationreport.Designer.cs">
+      <DependentUpon>Reservationreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Management_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation_Management_Dashboard.Designer.cs">
+      <DependentUpon>Reservation_Management_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectRentalCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectRentalCustomer.Designer.cs">
+      <DependentUpon>SelectRentalCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectReservationCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectReservationCustomer.Designer.cs">
+      <DependentUpon>SelectReservationCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update Vehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update Vehicle.Designer.cs">
+      <DependentUpon>Update Vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateBrand.Designer.cs">
+      <DependentUpon>UpdateBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCategory.Designer.cs">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateRental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRental.Designer.cs">
+      <DependentUpon>UpdateRental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleReport.Designer.cs">
+      <DependentUpon>VehicleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle_Management_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle_Management_Dashboard.Designer.cs">
+      <DependentUpon>Vehicle_Management_Dashboard.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddBrand.resx">
+      <DependentUpon>AddBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changePassword.resx">
+      <DependentUpon>changePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerIndate.resx">
+      <DependentUpon>CustomerIndate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerReport.resx">
+      <DependentUpon>CustomerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportcrystalrent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reportcrystalrent.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportrent.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Reportrent.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rentalReport.resx">
+      <DependentUpon>rentalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modelmanagement.resx">
+      <DependentUpon>modelmanagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category_Management_Dashboard.resx">
+      <DependentUpon>Category_Management_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerManagement.resx">
+      <DependentUpon>CustomerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteBrand.resx">
+      <DependentUpon>DeleteBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCAtegory.resx">
+      <DependentUpon>DeleteCAtegory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteRental.resx">
+      <DependentUpon>DeleteRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteReservation.resx">
+      <DependentUpon>DeleteReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteVehicleDetails.resx">
+      <DependentUpon>DeleteVehicleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MakeReservation.resx">
+      <DependentUpon>MakeReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewVehicle.resx">
+      <DependentUpon>NewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rental Management DashBoard.resx">
+      <DependentUpon>Rental Management DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rental.resx">
+      <DependentUpon>Rental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservationreport.resx">
+      <DependentUpon>Reservationreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation_Management_Dashboard.resx">
+      <DependentUpon>Reservation_Management_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectRentalCustomer.resx">
+      <DependentUpon>SelectRentalCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectReservationCustomer.resx">
+      <DependentUpon>SelectReservationCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update Vehicle.resx">
+      <DependentUpon>Update Vehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateBrand.resx">
+      <DependentUpon>UpdateBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCategory.resx">
+      <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRental.resx">
+      <DependentUpon>UpdateRental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleReport.resx">
+      <DependentUpon>VehicleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle_Management_Dashboard.resx">
+      <DependentUpon>Vehicle_Management_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CARRENTALDataSet.xsc">
+      <DependentUpon>CARRENTALDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CARRENTALDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CARRENTALDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CARRENTALDataSet.xss">
+      <DependentUpon>CARRENTALDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
